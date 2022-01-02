@@ -39,14 +39,8 @@ const LoggingIn = ({ submitForm }) => {
       },
     });
     result = await result.json();
-   
-    localStorage.setItem(
-      "login",
-      JSON.stringify({
-        login: true,
-        token: result.token,
-      })
-    );
+
+    localStorage.setItem("token", result.token);
     console.log("token", result);
     history.push("/makeshipment");
   };

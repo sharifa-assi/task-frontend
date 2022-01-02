@@ -33,14 +33,10 @@ const FormSignup = ({ submitForm }) => {
     alert("New shipment has been created!");
   }
 
-  const getToken = () => {
-   let token = localStorage.getItem("token");
-  };
-
   useEffect(() => {
-    getToken();
+    const tok = localStorage.getItem("token");
+    console.log(tok, "token");
   }, []);
-
 
   return (
     <div className="form-content-right">
